@@ -369,7 +369,7 @@
                     <div class="stat-label">Teachers Participating</div>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">$450</span>
+                    <span class="stat-number">$350</span>
                     <div class="stat-label">In Prizes to Win</div>
                 </div>
             </div>
@@ -378,7 +378,7 @@
                 <h3>🎁 What You'll Get</h3>
                 <div class="prize-list">
                     <div class="prize">
-                        <span class="prize-amount">$200</span>
+                        <span class="prize-amount">$100</span>
                         <div>Grand Prize Winner</div>
                     </div>
                     <div class="prize">
@@ -494,30 +494,30 @@
         }
         
         // Add some interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate stats on scroll
-            const stats = document.querySelectorAll('.stat-number');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const target = entry.target;
-                        const finalValue = target.textContent;
-                        let currentValue = 0;
-                        const increment = finalValue.includes('$') ? 50 : finalValue.includes('+') ? 50 : 1;
-                        const timer = setInterval(() => {
-                            currentValue += increment;
-                            if (currentValue >= parseInt(finalValue)) {
-                                currentValue = finalValue;
-                                clearInterval(timer);
-                            }
-                            target.textContent = currentValue + (finalValue.includes('+') ? '+' : '');
-                        }, 50);
-                    }
-                });
-            });
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     // Animate stats on scroll
+        //     const stats = document.querySelectorAll('.stat-number');
+        //     const observer = new IntersectionObserver((entries) => {
+        //         entries.forEach(entry => {
+        //             if (entry.isIntersecting) {
+        //                 const target = entry.target;
+        //                 const finalValue = target.textContent;
+        //                 let currentValue = 0;
+        //                 const increment = finalValue.includes('$') ? 50 : finalValue.includes('+') ? 50 : 1;
+        //                 const timer = setInterval(() => {
+        //                     currentValue += increment;
+        //                     if (currentValue >= parseInt(finalValue)) {
+        //                         currentValue = finalValue;
+        //                         clearInterval(timer);
+        //                     }
+        //                     target.textContent = currentValue + (finalValue.includes('+') ? '+' : '');
+        //                 }, 50);
+        //             }
+        //         });
+        //     });
             
-            stats.forEach(stat => observer.observe(stat));
-        });
+        //     stats.forEach(stat => observer.observe(stat));
+        // });
     </script>
 </body>
 </html>
